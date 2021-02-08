@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fir-proj-aac2f"
+  },
+  "targets": {
+    "fir-proj-aac2f": {
+      "hosting": {
+        "demo-fire": [
+          "fir-proj-aac2f"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="login--wrapper">
+  <form class="login--form"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()">
+    <label>Enter email: <input type="email" formControlName="email"></label>
+    <label>Enter password: <input type="password" formControlName="password"></label>
+    <button type="submit">Log In</button>
+  </form>
+  <section>
+    Have google account?
+    Log In with <img class="login--icon"
+                     src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.techmerry.com%2Fwp-content%2Fuploads%2F2014%2F09%2Fgoogle.jpg&imgrefurl=http%3A%2F%2Fwww.techmerry.com%2F10-best-reasons-google-got-importance%2F&tbnid=y1O2nO-LvLIv9M&vet=12ahUKEwjayIj--dDuAhUPzSoKHdrCCe8QMygBegUIARDTAQ..i&docid=vkqk9pk7rEwuyM&w=1000&h=1000&q=google&ved=2ahUKEwjayIj--dDuAhUPzSoKHdrCCe8QMygBegUIARDTAQ"
+                     alt="google"
+                     (click)="loginWithGoogle()">
+  </section>
+</div>

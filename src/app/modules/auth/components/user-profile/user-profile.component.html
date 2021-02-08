@@ -1,0 +1,68 @@
+
+
+<section class="profile">
+  <div class="profile-card">
+    <div class="profile--avatar">
+      <div class="profile--avatar-image">
+        <img [src]="user?.photoUrl" alt="avatar">
+      </div>
+      <div class="profile--avatar-controls">
+        <button mat-raised-button color="primary">Change Avatar <mat-icon>add</mat-icon></button>
+        <button mat-raised-button color="warn">Delete Avatar<mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+
+    <div class="profile--form" [formGroup]="userForm">
+      <mat-form-field appearance="fill" class="profile--form-field">
+        <mat-label>Name</mat-label>
+          <input matInput type="text" [placeholder]="'Name'" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="profile--form-field">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [placeholder]="'Email'" formControlName="email">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="profile--change-password" *ngIf="user?.havePassword">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Change password
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field appearance="fill" class="profile--form-field">
+          <mat-label>Old Password</mat-label>
+          <input matInput type="password" [placeholder]="'Old Password'">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="profile--form-field">
+          <mat-label>New Password</mat-label>
+          <input matInput type="password" [placeholder]="'New Password'">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="profile--form-field">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" [placeholder]="'Confirm Password'">
+        </mat-form-field>
+
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+</section>
+
+
+
+
+
+
+
+<!--change password-->
+
+<!--save/delete controls-->
