@@ -1,0 +1,8 @@
+{
+  "name": "ru:name",
+  "auth.title": "ru: auth title",
+  "login": {
+    "title": "ru: login title"
+  },
+  "language-label": "Выберите язык:"
+}
